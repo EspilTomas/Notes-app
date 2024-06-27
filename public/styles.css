@@ -1,0 +1,121 @@
+/* styles.css */
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f3e8ee;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #app {
+    max-width: 800px; /* Aumentamos el ancho para mostrar más notas en una fila */
+    margin: 50px auto;
+    background: #fdf5e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #6a0572;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #d1a3a4;
+    border-radius: 5px;
+    background-color: #fff8e1;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7675;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #d63031;
+    transform: scale(1.05);
+  }
+  
+  #notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Diseño de cuadrícula */
+    gap: 10px;
+  }
+  
+  .note-card {
+    background: #ffebee;
+    border: 2px solid #ff8a80;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+  }
+  
+  .note-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .note-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .note-card p {
+    flex-grow: 1;
+    color: #555;
+  }
+  
+  .note-card button {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: #ff7675;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .note-card button:hover {
+    background-color: #d63031;
+    transform: scale(1.05);
+  }
+  
+  .note-card button.edit {
+    background-color: hwb(244 37% 23%);
+  }
+  
+  .note-card button.edit:hover {
+    background-color: hwb(244 37% 23%);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
