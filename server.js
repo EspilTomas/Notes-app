@@ -6,8 +6,9 @@ const notes = require('./routes/notes');
 
 const app = express();
 
-// Conexión a MongoDB (cambia la URL si estás usando MongoDB Atlas o una base de datos diferente)
-mongoose.connect('mongodb://0.0.0.0:27017/notesdb', {
+// Conexión a MongoDB (usando variable de entorno)
+const mongoURI = process.env.MONGODB_URI || 'mongodb://0.0.0.0:27017/notesdb';
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
